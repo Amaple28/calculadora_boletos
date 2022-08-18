@@ -91,15 +91,15 @@ function resetar() {
     const vtotal4 = document.getElementById("boleto4-valor");
     const dfinal4 = document.getElementById("boleto4-vencimento");
 
-    vtotal1.innerHTML = '00,00';
-    dfinal1.innerHTML = '00/00/0000';
+    vtotal1.innerHTML = '';
+    dfinal1.innerHTML = '';
 
-    vtotal2.innerHTML = '00,00';
-    dfinal2.innerHTML = '00/00/0000';
+    vtotal2.innerHTML = '';
+    dfinal2.innerHTML = '';
 
-    vtotal3.innerHTML = '00,00';
-    dfinal3.innerHTML = '00/00/0000';
+    vtotal3.innerHTML = '';
+    dfinal3.innerHTML = '';
 
-    vtotal4.innerHTML = '00,00';
-    dfinal4.innerHTML = '00/00/0000';
+    vtotal4.innerHTML = '';
+    dfinal4.innerHTML = '';
 }
