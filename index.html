@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora de Boletos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- ICON -->
+    <link rel="shortcut icon" href="img/logo_semfundo_me.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_semfundo_me.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+                <strong>Calculadora de Boletos</strong>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <form class="col form">
+
+                <h4>Preencha ⤵️</h4>
+
+                <div class="form-floating col-10">
+                    <input type="number" class="form-control" id="valor-pedido" placeholder="300">
+                    <label for="floatingInputValue">Valor do Pedido</label>
+                </div>
+
+                <div class="form-floating col-10">
+                    <input type="date" class="form-control" id="data-pedido">
+                    <label for="floatingInputValue">Data do Pedido</label>
+                </div>
+
+                <div class="form-floating col-10">
+                    <select class="form-select" id="parcelas" aria-label="Floating label select example">
+                        <option selected>Selecione</option>
+                        <option value="1">1 Parcela</option>
+                        <option value="2">2 Parcelas</option>
+                        <option value="3">3 Parcelas</option>
+                        <option value="4">4 Parcelas</option>
+                    </select>
+                    <label for="floatingSelect">Quantidade de Parcelas</label>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-success" type="button" onclick="calcular()">Calcular</button>
+                    <button type="reset" class="btn btn-dark" type="button" onclick="resetar()">Limpar</button>
+                </div>
+            </form>
+
+            <div class="col boletos">
+                <div class="container text-center grid_boletos">
+                    <div class="row">
+
+                        <div class="col-6 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-header">Boleto 1 </h5>
+                                <div class="card-body">
+                                    <p class="card-text valor">Valor: <span id="boleto1-valor">00,00</span></p>
+                                    <p class="card-text data">Data: <span id="boleto1-vencimento">00/00/0000</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-header">Boleto 2 </h5>
+                                <div class="card-body">
+                                    <p class="card-text valor">Valor: <span id="boleto2-valor">00,00</span></p>
+                                    <p class="card-text data">Data: <span id="boleto2-vencimento">00/00/0000</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Forçar as próximas colunas a quebrar para uma nova linha no ponto de interrupção md e para cima -->
+                        <div class="w-100 d-none d-md-block"></div>
+
+                        <div class="col-6 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-header">Boleto 3 </h5>
+                                <div class="card-body">
+                                    <p class="card-text valor">Valor: <span id="boleto3-valor">00,00</span></p>
+                                    <p class="card-text data">Data: <span id="boleto3-vencimento">00/00/0000</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-header">Boleto 4 </h5>
+                                <div class="card-body">
+                                    <p class="card-text valor">Valor: <span id="boleto4-valor">00,00</span></p>
+                                    <p class="card-text data">Data: <span id="boleto4-vencimento">00/00/0000</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer fixed-bottom">Copyright © 2022 Todos os direitos reservados by Maisa Rodrigues</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
