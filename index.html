@@ -24,6 +24,8 @@
         </div>
     </nav>
 
+    <br>
+
     <div class="container">
         <div class="row">
 
@@ -49,10 +51,33 @@
                             <option value="2">2 Parcelas</option>
                             <option value="3">3 Parcelas</option>
                             <option value="4">4 Parcelas</option>
+                            <option value="5">5 Parcelas</option>
                         </select>
                         <label for="floatingSelect">Quantidade de Parcelas</label>
                     </div>
 
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input"
+                                    name="flexRadioDefault" id="flexRadioDefault1">
+                                </div>
+                                <input type="text" class="form-control" for="flexRadioDefault1" aria-label="" value="28 Dias" disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input"
+                                    name="flexRadioDefault" id="flexRadioDefault2">
+                                </div>
+                                <input type="text" class="form-control" for="flexRadioDefault2" aria-label="" value="24 Dias" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-light" type="button" onclick="calcular()">Calcular</button>
                         <button type="reset" class="btn btn-dark" type="button" onclick="resetar()">Limpar</button>
@@ -62,9 +87,9 @@
 
             <div class="col boletos">
                 <div class="container text-center grid_boletos">
-                    <div class="row">
+                    <div class="row justify-content-center">
 
-                        <div class="col-6 col-sm-6">
+                        <div class="col-6 col-sm-12 col-lg-6 col-md-6">
                             <div class="card">
                                 <h5 class="card-header">Boleto 1 </h5>
                                 <div class="card-body">
@@ -74,7 +99,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6 col-sm-6">
+                        <div class="col-6 col-sm-12 col-lg-6 col-md-6">
                             <div class="card">
                                 <h5 class="card-header">Boleto 2 </h5>
                                 <div class="card-body">
@@ -87,7 +112,7 @@
                         <!-- Forçar as próximas colunas a quebrar para uma nova linha no ponto de interrupção md e para cima -->
                         <div class="w-100 d-none d-md-block"></div>
 
-                        <div class="col-6 col-sm-6">
+                        <div class="col-6 col-sm-12 col-lg-6 col-md-6">
                             <div class="card">
                                 <h5 class="card-header">Boleto 3 </h5>
                                 <div class="card-body">
@@ -97,12 +122,22 @@
                             </div>
                         </div>
 
-                        <div class="col-6 col-sm-6">
+                        <div class="col-6 col-sm-12 col-lg-6 col-md-6">
                             <div class="card">
                                 <h5 class="card-header">Boleto 4 </h5>
                                 <div class="card-body">
                                     <p class="card-text valor">Valor: <span id="boleto4-valor"></span></p>
                                     <p class="card-text data">Data: <span id="boleto4-vencimento"></span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-lg-6 col-md-6">
+                            <div class="card">
+                                <h5 class="card-header">Boleto 5 </h5>
+                                <div class="card-body">
+                                    <p class="card-text valor">Valor: <span id="boleto5-valor"></span></p>
+                                    <p class="card-text data">Data: <span id="boleto5-vencimento"></span></p>
                                 </div>
                             </div>
                         </div>
